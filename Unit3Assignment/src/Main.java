@@ -44,18 +44,22 @@ public class Main {
     }
 
     private static int[] insert(int[] arr1, int[] arr2, int position, int number){
-        for (int i = 0; i < arr1.length; i++) {
-            if (i >= position) {
-                if (i == arr2.length - 1) {
-                    break;
+        if(0 == arr2.length){
+            System.out.println("0");
+        }else {
+            for (int i = 0; i < arr1.length; i++) {
+                if (i >= position) {
+                    if (i == arr2.length - 1) {
+                        break;
+                    } else {
+                        arr2[i + 1] = arr1[i];
+                    }
                 } else {
-                    arr2[i + 1] = arr1[i];
+                    arr2[i] = arr1[i];
                 }
-            } else {
-                arr2[i] = arr1[i];
             }
+            arr2[position] = number;
         }
-        arr2[position] = number;
         return arr2;
     }
 }

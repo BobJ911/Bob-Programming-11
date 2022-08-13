@@ -57,8 +57,12 @@ public class School {
     School(int removestudents, int Q, int W, int P, int J){
         System.out.println("How many students would you like to remove?");
         int j = s1.nextInt();
-        for(int i = 1; i <=j; i++){
-            students.remove(i);
+        if(j == students.size()){
+            students.clear();
+        }else {
+            for (int i = 0; i < j; i++) {
+                students.remove(i);
+            }
         }
         System.out.println();
     }//remove students
@@ -66,8 +70,12 @@ public class School {
     School(int removeteachers, int Q, int W, int P, int E, int I){
         System.out.println("How many Teachers would you like to remove?");
         int j = s1.nextInt();
-        for(int i = 1; i<=j; i++){
-            teachers.remove(i);
+        if(j == teachers.size()){
+            teachers.clear();
+        }else {
+            for (int i = 0; i < j; i++) {
+                teachers.remove(i);
+            }
         }
         System.out.println();
     }//remove teachers
