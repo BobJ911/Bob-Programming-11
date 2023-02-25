@@ -10,6 +10,8 @@ public class Main {
             System.out.println();
         }
     }
+
+    //function for a program of if statements of all the actions the user can do
          static void all(Scanner s1,Customer customer1)
          {
              System.out.println("What would you like to do? Deposit, Withdraw, Display Deposits or Display Withdraws?");
